@@ -1,8 +1,8 @@
-import './App.css';
+import InvestmentsPage from './pages/InvestmentsPage';
 
 function App() {
 	return (
-		<></>
+		<InvestmentsPage />
 	);
 }
 
