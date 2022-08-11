@@ -40,9 +40,7 @@ function InvestmentsPage() {
 	const sortByInvestmentId = (a, b) => a.investmentId.localeCompare(b.investmentId)
 
 	const reorderReports = unorderedReports => {
-
 		const newUnorderedReports = [...unorderedReports]
-
 		const reorderedReports = newUnorderedReports.sort(sortByMonth).sort(sortByInvestmentId)
 
 		return reorderedReports.map(report => {
@@ -70,7 +68,6 @@ function InvestmentsPage() {
 
 			return { ...investment, total, percent: percentOfYear, yielded }
 		})
-
 		return newMappedInvestments
 	}
 
@@ -90,7 +87,7 @@ function InvestmentsPage() {
 								</span>
 							</div>
 							<Table hover>
-								<thead hidden>
+								<thead>
 									<tr>
 										<th>Mês/Ano</th>
 										<th>Valor</th>

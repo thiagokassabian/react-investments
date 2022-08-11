@@ -1,7 +1,7 @@
 function Investment({ children }) {
-	const { id, month, value, year, lastValue, yielded, percent } = children
+	const { month, value, year, yielded, percent } = children
 
-	const yieldClass = month != 1 ? yielded ? 'text-success' : 'text-danger' : ''
+	const yieldClass = month !== 1 ? yielded ? 'text-success' : 'text-danger' : ''
 
 	const months = {
 		jan: 1,
@@ -18,9 +18,7 @@ function Investment({ children }) {
 		dez: 12,
 	}
 
-	function getKeyByValue(object, value) {
-		return Object.keys(object).find(key => object[key] === value);
-	}
+	const getKeyByValue = (object, value) => Object.keys(object).find(key => object[key] === value);
 
 	return (
 		<tr className={`${yieldClass}`}>
